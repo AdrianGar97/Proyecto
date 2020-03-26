@@ -37,7 +37,7 @@ Para VNC:
 sudo raspi-config
 ```
 Nos saldrá una terminal, nos dirigimos a "Opciones avanzadas" y lo habilitamos.
-### Acceder mediante SSS y VNC desde Ubuntu
+### Acceder mediante SSH y VNC desde Ubuntu
 Para acceder mediante SSH nos vamos a la terminal y escribimos el sigguiente comando:
 ```
 ssh pi@192.168.22.5
