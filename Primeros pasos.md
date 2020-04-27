@@ -1,4 +1,4 @@
-# Proyecto
+# Primeros pasos
 
 ## Elementos necesarios
 1. Rapberry Pi.
@@ -7,14 +7,13 @@
 4. Caja para Raspberry (Opcional).
 
 ## Sistema Operativo
-En este caso vamos a utilizar el sistema operativo Raspbian, el cual podemos descargar desde la página ofical de Raspberry:
+En este caso vamos a utilizar el sistema operativo Raspbian, el cual podemos descargar desde la página oficial de Raspberry:
 https://www.raspberrypi.org/downloads/raspbian/
-A continuación lo montaremos en nuestra SD con la utilidad de "Discos" de Ubuntu (El SO que estoy utilizando junto con Raspbian en este proyescto) y dentro de esta seleccionamos la tarjeta SD y en "opciones adicionales de la partición" seleccionamos "Crear imagen de partición...". Seleccinamos el SO y aceptamos.
+A continuación lo montaremos en nuestra SD con la utilidad de "Discos" de Ubuntu (El SO que estoy utilizando junto con Raspbian en este proyecto) y dentro de esta seleccionamos la tarjeta SD y en "opciones adicionales de la partición" seleccionamos "Crear imagen de partición...". Seleccionamos el SO y aceptamos.
 
-## Primeros pasos
-### IP estática
+## IP estática
 Tras instalar el SO y configurar lo básico (idioma, hora, contraseña,...) vamos a poner una IP fija para poder acceder mediante SSH y VNC y no tener que andar conectando un teclado, ratón y monitor todo el rato a la Raspberry.
-Nos vamos a un terminal dentro de la Raspberry y ponemos el siguient comando:
+Nos vamos a un terminal dentro de la Raspberry y ponemos el siguiente comando:
 ```
 sudo nano /etc/dhcpcd.conf
 ```
@@ -25,7 +24,7 @@ static ip_address=192.168.22.5/24
 static routers=192.168.22.1
 static domain_name_servers=192.168.22.1
 ```
-### Habilitar SSH y VNC
+## Habilitar SSH y VNC
 Para habilitar los servicios de SSH y VNC nos vamos a una terminal. <br>
 Para SSH hacemos:
 ```
@@ -37,8 +36,8 @@ Para VNC:
 sudo raspi-config
 ```
 Nos saldrá una terminal, nos dirigimos a "Opciones avanzadas" y lo habilitamos.
-### Acceder mediante SSH y VNC desde Ubuntu
-Para acceder mediante SSH nos vamos a la terminal y escribimos el sigguiente comando:
+## Acceder mediante SSH y VNC desde Ubuntu
+Para acceder mediante SSH nos vamos a la terminal y escribimos el siguiente comando:
 ```
 ssh pi@192.168.22.5
 ```
