@@ -22,17 +22,18 @@ A continuación descargamos e instalamos el script ejecutando el siguiente coman
 ```
 curl -sSL https://install.pi-hole.net | sudo bash
 ```
+
+![Alt text](/capturas/Pi-hole/0.png=true "Optional Title")
+
 Tras ejecutar este comando nos aparecerá una pantalla que nos indicará que nuestro dispositivo se convertirá en un bloqueador de publicidad:
 
 *img1* 
 
-Después se nos advertirá de que nuestra Raspberry Pi precisará de un IP estática para funcionar de manera adecuada:
+Después se nos advertirá de que nuestra Raspberry Pi precisará de un IP estática para funcionar de manera adecuada.
+
+Seguidamente se precisará que seleccionemos nuestra interfaz de red, seleccionaré "wlan0" en mi caso ya que estoy conectado a una red wifi:
 
 *img2*
-
-Seguidamente se precisará que seleccionemos nuestra interfaz de red, seleccionaré "" en mi caso ya que estoy conectado a una red wifi:
-
-*img3*
 
 Ahora seleccionaremos el servidor DNS que vamos a utilizar, en mi caso usaré los servidores de OpenDNS:
 
@@ -52,12 +53,17 @@ Por último, seleccioaremos que instale la interfaz web y que nos guarde el regi
 
 Una vez definidas las opciones de configuración se procederá a la instalación de los paquetes necesarios para que Pi-hole funcione de forma adecuada.
 
+*img3*
+
 ## Configurar Pi-hole
 ### Fijar una contraseña
 Primero deberemos fijar una contraseña de administrador para acceder al panel de administración. Para ello ejecutamos el siguiente comando:
 ```
 pihole -a -p
 ```
+
+*img14*
+
 Después de ejecutar el comando definimos nuestra contraseña y reiniciamos la Raspberry.
 ### Acceder al panel de administrador
 Podremos administrar Pi-hole desde cualquier equipo conectado a nuestra red accediendo mediante un navegador. <br>
@@ -75,7 +81,7 @@ La primera de ellas es ejecutar el siguiente comando en la terminal de nuestro d
 ```
 pihole -g
 ```
-La segunda opción es accediendo al panel de administración web. En el panel de administración pulsamos sobre el menú Tools. Cuando se despliegue el submenú pulsamos en Update Lists. Finalmente pulsamos en la opción Update Lists y se actualizaran la totalidad de listas a que estamos suscritos.
+La segunda opción es accediendo al panel de administración web. En el panel de administración pulsamos sobre el menú Tools. Cuando se despliegue el submenú pulsamos en Update Gravity. Finalmente pulsamos en la opción Update Lists y se actualizaran la totalidad de listas a que estamos suscritos.
 
 *img10*
 ### Añadir filtros o listas adicionales
@@ -93,11 +99,9 @@ No es recomendado añadir más filtros de los que son estrictamente necesarios y
 
 Para añadir una lista, accedemos a uno de los enlaces y clicamos en raw. copiamos su URL.
 
-*img11*
+*img11* *img15*
 
 Dentro de la interfaz web de Pi-hole vamos a Settings y dentro de a Block Lists.
-
-*img12*
 
 Pegamos la URL y pulsamos en Save and Update.
 
