@@ -16,7 +16,7 @@ Utilizaremos el comando curl para instalar la aplicación, ejecutamos el siguien
 ```
 curl -L https://install.pivpn.io | bash
 ```
-Tras instalarse todas las dependencias necesarias nos aparecerá la pantalla que nos indicará que vamos a instlar:
+Tras instalarse todas las dependencias necesarias nos aparecerá la pantalla que nos indicará que vamos a instalar:
 
 *img1*
 
