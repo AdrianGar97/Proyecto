@@ -18,59 +18,47 @@ curl -L https://install.pivpn.io | bash
 ```
 Tras instalarse todas las dependencias necesarias nos aparecerá la pantalla que nos indicará que vamos a instalar:
 
-*img1*
-
-Escogeremos nuetra interfaz de red, en mi caso la "wlan0":
-
-*img2*
+![Alt text](capturas/VPN/1.png?raw=true "Optional Title")
 
 Ahora nos toca confirmar que la dirección IP estática que nos indica es la correcta:
 
-*img3*
-
-Nos advertirá que podría haber un conflicto IP en nuestro router, pulsamos "OK" y seguimos:
-
-*img4*
+![Alt text](capturas/VPN/3.png?raw=true "Optional Title")
 
 Seleccionamos el perfil que vamos a usar para instalar la VPN:
 
-*img5*
+![Alt text](capturas/VPN/5.png?raw=true "Optional Title")
 
 Pondremos que nuestro servidor se mantenga siempre actualizado:
 
-*img6*
+![Alt text](capturas/VPN/6.png?raw=true "Optional Title")
 
 Ahora seleccionaremos el protocolo, es recomendable utilizar siempre el UDP:
 
-*img7*
+![Alt text](capturas/VPN/7.png?raw=true "Optional Title")
 
 Ahora introduciremos el puerto necesario para conectarnos con nuestra VPN, en este caso por defecto es 1194:
 
-*img8*
+![Alt text](capturas/VPN/8.png?raw=true "Optional Title")
 
-Toca elegir el tipo de cifrado que queremos en nuestro VPN, escogemos 2048 para tener mejor rendimiento:
+Toca elegir el tipo de cifrado que queremos en nuestro VPN:
 
-*img9*
+![Alt text](capturas/VPN/9.png?raw=true "Optional Title")
 
-A continuación podemos agregar nuestros datos para crear el certificado para la conexión VPN, aunque no es obligatorio:
+Después de haber confirmado los datos, nos sale otro mensaje advirtiendo que va a generar una key:
 
-*img10*
-
-espués de haber confirmado los datos, nos sale otro mensaje advirtiendo que va a generar una key Diffie-Hellman:
-
-*img11*
+![Alt text](capturas/VPN/11.png?raw=true "Optional Title")
 
 Una vez haya terminado el proceso, seleccinaremos la forma con la cual nos conectaremos a nuestra VPN, sea por IP o por DNS Pública. Yo escojo la IP pública:
 
-*img12*
+![Alt text](capturas/VPN/12.png?raw=true "Optional Title")
 
 Seleccionamos el proveedor DNS principal para nuestro VPN:
 
-*img13*
+![Alt text](capturas/VPN/13.png?raw=true "Optional Title")
 
 Y la instalación ya ha finalizado, ahora reiniciamos el sistema:
 
-*img14*
+![Alt text](capturas/VPN/14.png?raw=true "Optional Title")
 
 Ahora crearemos nuestro usuario con el siguiente comando:
 ```
@@ -82,14 +70,14 @@ El archivo creado se encuentra en "/home/NUESTRO_USUARIO/ovpns" y será el que u
 ## Cliente OpenVPN
 Tras instalar nuestro cliente deberemos dirigirnos a "C:/Archivos de programa/OpenVPN/config" y copiar allí el archivo de cliente creado. Para ello podemos conectarnos mediante FTP a nuestra raspberry y copipar el archivo.
 
-Para ejecutar el programa damos al botón "Inicio de Windows - Barra de Programas - OpenVPN - OpenVPN GUI".
+Para ejecutar el programa damos al botón "Inicio de Windows - Barra de Programas - OpenVPN - OpenVPN Connect".
 
-*img15*
+![Alt text](capturas/VPN/15.png?raw=true "Optional Title")
 
 Vamos a la barra de tareas, nos saldrá un icono con un candado hacemos "botón segundario - Connect".
 
-*img16*
+![Alt text](capturas/VPN/16.png?raw=true "Optional Title")
 
 Introducimos la contraseña configurada para nuestro cliente y listo.
 
-*img17*
+![Alt text](capturas/VPN/17.png?raw=true "Optional Title")
