@@ -1,11 +1,5 @@
 # Pi-hole
 
-## Elementos necesarios
-1. Rapberry Pi.
-2. Fuente de alimentación.
-3. Tarjeta SD con el SO Raspbian lite.
-4. Caja para Raspberry (Opcional).
-
 ## ¿Qué es un Pi-hole?
 Pi-Hole es un servidor DNS Cache diseñado para bloquear el siguiente tipo de contenido a nivel de red:
 1. Webs fraudulentas que se dedican a instalar malware o a usar nuestro hardware para minar criptomoneda.

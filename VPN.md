@@ -1,11 +1,5 @@
 # VPN
 
-## Elementos necesarios
-1. Rapberry Pi.
-2. Fuente de alimentación.
-3. Tarjeta SD con el SO Raspbian lite.
-4. Caja para Raspberry (Opcional).
-
 ## ¿Qué es una VPN?
 Las VPN (Virtual Private Network) o Red Privada Virtual en español son un tipo de red en el que se crea una extensión de una red privada para su acceso desde Internet, es como la red local que tienes en casa o en la oficina pero sobre Internet.
 

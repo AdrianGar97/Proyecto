@@ -1,13 +1,5 @@
 # NAS
 
-## Elementos necesarios
-1. Rapberry Pi.
-2. Fuente de alimentación.
-3. Tarjeta SD con el SO Raspbian lite.
-4. Caja para Raspberry (Opcional).
-5. 2 discos duros externos.
-6. SAI (Opcional).
-
 ## ¿Qué es un NAS?
 Un sistema NAS es un dispositivo de almacenamiento conectado a una red que permite almacenar y recuperar los datos en un punto centralizado para usuarios autorizados de la red y multiplicidad de clientes. Los dispositivos NAS son flexibles y expandibles; esto lo que implica es que a medida que vaya necesitando más capacidad de almacenamiento, podrá añadirla a lo que ya tiene. Un dispositivo NAS es como tener una nube privada en la oficina. Es más veloz, menos caro y ofrece todos los beneficios de una nube pública dentro del emplazamiento, lo que le proporciona todo el control.
 
@@ -119,6 +111,3 @@ sudo chmod -R 700 /mnt/raid1/shared/username
 Un RAID no es un sistema de respaldo. Proporciona un cierto nivel de redundancia de datos, pero no será de ninguna ayuda si elimina accidentalmente un archivo. Si una unidad falla, su sistema estará en un estado 'degradado', lo que significa que los datos estarán en riesgo hasta que la unidad sea reemplazada. Si falla la segunda unidad, desastre.
 
 La solución ideal es hacer una copia de seguridad en la nube con proveedores como Dropbox o Google. Las utilidades como Rclone pueden sincronizar estructuras de directorios completas en el almacenamiento de muchos proveedores diferentes.
-
-## SAI o UPS
-Debido a cómo manejan los datos los sistemas basados en Linux utilizar un SAI o un UPS nos dará un cierto tiempo para apagar el sistema de forma segura. Incluso muchos de estos dispositivos pueden comunicar a nuestra Raspberry que se apague de forma segura automáticamente al activarse.
