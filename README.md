@@ -1,2 +1,1 @@
-# Proyecto
-![Alt text](capturas/logo.png?raw=true "Optional Title")
+<div style="text-align:center"><img src="capturas/logo.png" /></div>
