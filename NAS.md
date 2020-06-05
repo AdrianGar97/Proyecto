@@ -1,6 +1,6 @@
 # NAS
 
-## ¿Qué es un NAS?
+### ¿Qué es un NAS?
 Un sistema NAS es un dispositivo de almacenamiento conectado a una red que permite almacenar y recuperar los datos en un punto centralizado para usuarios autorizados de la red y multiplicidad de clientes. Los dispositivos NAS son flexibles y expandibles; esto lo que implica es que a medida que vaya necesitando más capacidad de almacenamiento, podrá añadirla a lo que ya tiene. Un dispositivo NAS es como tener una nube privada en la oficina. Es más veloz, menos caro y ofrece todos los beneficios de una nube pública dentro del emplazamiento, lo que le proporciona todo el control.
 
 Los sistemas NAS son ideales para las pequeñas y medianas empresas:
@@ -9,14 +9,14 @@ Los sistemas NAS son ideales para las pequeñas y medianas empresas:
 3. Copias de seguridad sencillas para que siempre estén accesibles cuando las necesite.
 4. Buena centralización del almacenamiento de datos de una forma segura y fiable.
 
-## Preparando el SO
+### Preparando el SO
 Ahora deberemos preparar nuestro SO. Para ello habilitaremos el SSH y cambiaremos el nombre del host para poder tener un acceso más fácil, por ejemplo, podemos ponerle de nombre "nas". Por último comprobamos que todo está actualizado con:
 ```
 sudo apt update && sudo apt -y upgrade
 ```
 Por último reiniciamos el SO.
 
-## Agregar el almacenamiento
+### Agregar el almacenamiento
 Lo primero será conectar nuestros discos duros y utilizar el comando "lsblk" para comprobar que los detecta. En este caso nos debería de salir "mmcblko" que sería nuestra SD y "sda" y "sdb" que serían los discos duros.
 
 Ahora debemos particionar las unidades para que Raspbian entienda cómo almacenar datos en ellas. Para ello usamos el comando:
@@ -60,7 +60,7 @@ sudo mdadm --detail --scan | sudo tee -a
 ```
 Reiniciamos y todo listo para funcionar.
 
-## Samba
+### Samba
 Utilizaremos el protocolo Samba para compartir los archivos en red. Al no venir instalado deberemos hacer con el siguiente comando:
 ```
 sudo apt install samba samba-common-bin
@@ -99,15 +99,10 @@ sudo adduser username
 sudo smbpasswd -a username
 ```
 
-## Crear directorios de inicio
+### Crear directorios de inicio
 Para que cada usuarios tenga una carpeta donde guarde sus propios archivos individualmente podemos crearle un directorio dentro del RAID con el siguiente comando:
 ```
 mkdir /mnt/raid1/shared/username
 sudo chown -R username /mnt/raid1/shared/username
 sudo chmod -R 700 /mnt/raid1/shared/username
 ```
-
-## Copia de seguridad
-Un RAID no es un sistema de respaldo. Proporciona un cierto nivel de redundancia de datos, pero no será de ninguna ayuda si elimina accidentalmente un archivo. Si una unidad falla, su sistema estará en un estado 'degradado', lo que significa que los datos estarán en riesgo hasta que la unidad sea reemplazada. Si falla la segunda unidad, desastre.
-
-La solución ideal es hacer una copia de seguridad en la nube con proveedores como Dropbox o Google. Las utilidades como Rclone pueden sincronizar estructuras de directorios completas en el almacenamiento de muchos proveedores diferentes.

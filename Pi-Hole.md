@@ -1,12 +1,12 @@
 # Pi-hole
 
-## ¿Qué es un Pi-hole?
+### ¿Qué es un Pi-hole?
 Pi-Hole es un servidor DNS Cache diseñado para bloquear el siguiente tipo de contenido a nivel de red:
 1. Webs fraudulentas que se dedican a instalar malware o a usar nuestro hardware para minar criptomoneda.
 2. Bloquear las web que no queramos que visiten nuestros hijos o la gente conectada de nuestra red local. A modo de ejemplo existen filtros que bloquearán la totalidad de páginas pornográficas, páginas relacionadas con el juego online, etc.
 3. La totalidad de publicidad que aparece en páginas web y en aplicaciones de nuestros dispositivos.
 
-## Instalar Pi-hole
+### Instalar Pi-hole
 Para instalar Pi-hole necesitaremos la herrmienta Curl, ya que nos descargaremos y ejecutaremos un script. Para asegurarnos que está instalado ejecutamos el siguiente comando en la terminal:
 ```
 sudo apt-get install curl
@@ -49,8 +49,8 @@ Una vez definidas las opciones de configuración se procederá a la instalación
 
 ![Alt text](capturas/Pi-hole/3.png?raw=true "Optional Title")
 
-## Configurar Pi-hole
-### Fijar una contraseña
+### Configurar Pi-hole
+#### Fijar una contraseña
 Primero deberemos fijar una contraseña de administrador para acceder al panel de administración. Para ello ejecutamos el siguiente comando:
 ```
 pihole -a -p
@@ -60,7 +60,7 @@ pihole -a -p
 
 Después de ejecutar el comando definimos nuestra contraseña y reiniciamos la Raspberry.
 
-### Acceder al panel de administrador
+#### Acceder al panel de administrador
 Podremos administrar Pi-hole desde cualquier equipo conectado a nuestra red accediendo mediante un navegador. <br>
 Para acceder solo es necesario ingresar en el navegador la siguiente URL:
 ```
@@ -69,7 +69,7 @@ http://ip-servidor/admin/
 
 ![Alt text](capturas/Pi-hole/9.png?raw=true "Optional Title")
 
-### Actualizar las listas para filtrar y bloquear anuncios
+#### Actualizar las listas para filtrar y bloquear anuncios
 En la ubicación /etc/cron.d/pihole hay configurado un cronjob que actualiza nuestras listas de bloqueo de forma automática.
 
 Si alguna vez queremos realizar una actualización manual tenemos dos opciones.
@@ -82,7 +82,7 @@ La segunda opción es accediendo al panel de administración web. En el panel de
 
 ![Alt text](capturas/Pi-hole/10.png?raw=true "Optional Title")
 
-### Añadir filtros o listas adicionales
+#### Añadir filtros o listas adicionales
 Los filtros de serie bloquean prácticamente la totalidad de los anuncios. Pero también se pueden agregar otro filtros buscando en algunas páginas cómo:
 ```
 https://github.com/StevenBlack/hosts

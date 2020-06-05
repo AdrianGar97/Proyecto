@@ -89,10 +89,10 @@ Tras ejecutar ambos scrips tendremos que acceder a la ip del servidor donde teng
 
 Comprobamos que podemos añadir datos y se guardan correctamente.
 
-![Alt text](capturas/aplicacion/2.png?raw=true "IP-servidor")
-![Alt text](capturas/aplicacion/3.png?raw=true "IP-servidor")
+![Alt text](capturas/aplicacion/2.png?raw=true "Añadir datos")
+![Alt text](capturas/aplicacion/3.png?raw=true "Guardados")
 
 Por último comprobvamos que podemos acceder a Adminer para gestionar las bases de datos que tenemos.
 
-![Alt text](capturas/aplicacion/4.png?raw=true "IP-servidor")
-![Alt text](capturas/aplicacion/5.png?raw=true "IP-servidor")
+![Alt text](capturas/aplicacion/4.png?raw=true "Login gestor")
+![Alt text](capturas/aplicacion/5.png?raw=true "Gestor")
