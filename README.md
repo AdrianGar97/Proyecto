@@ -1,3 +1,12 @@
+---
+title: "Proyecto"
+author: [Adrián García Fortún]
+subject: "Markdown"
+keywords: [Markdown, README]
+lang: "en"
+toc-own-page: "true"
+---
+
 # **PROYECTO INTEGRADO**
 
 ![Alt text](capturas/logo.png?raw=true "Logo")
